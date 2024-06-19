@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G0LF</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #00ff00;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #00ff00;
+        }
+        .question {
+            display: none;
+            margin-top: 20px;
+        }
+        input[type="text"], select {
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 10px;
+            width: 80%;
+            background-color: #000;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #000;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00ff00;
+            color: #000;
+        }
+        #binary-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #000;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .binary {
+            position: absolute;
+            top: 0;
+            width: 20px;
+            height: 100%;
+            color: #00ff00;
+            font-size: 1em;
+            animation: fall linear infinite;
+        }
+        .binary span {
+            display: block;
+            opacity: 0;
+            animation: blink 1s linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+        @keyframes blink {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div id="binary-background"></div>
+    <h1>PR0J3CTG0LFSH0W - ULT1M4 F4S3 - 0 PR1M3EIR0 4 M4ND4AR 4 R3SP0ST4 CORR3T4 N0 GRUP0 L1B3R4A 4 C0NQU1ST4 3 G4NH4A O PR3M10</h1>
+    <div id="question1" class="question" style="display: block;">
+        <p>Nossa jornada começa muito simples e se complica até o fim. Pra começarmos bem, quantos dias temos em um ano comum?</p>
+        <input type="text" id="answer1" placeholder="Digite sua resposta aqui (Aqui é o placeholder, eu vou me divertir muito aqui)">
+        <button onclick="checkAnswer(1, '365')">Enviar</button>
+    </div>
+    <div id="question2" class="question">
+        <p>Em um cenário hipotético que eu me chame DJ CL e esteja fazendo som em uma chácara, caso o vizinho reclame, o que faço?</p>
+        <select id="answer2">
+            <option value="">Serjao Berranteiro</option>
+            <option value="garrafa">Choro até soluçar, corro até meus amigos e chamo o caseiro</option>
+            <option value="cavalo">O vizinho nunca existiu, era tudo uma miragem</option>
+            <option value="lampada">Chamo minha namorada Natália para me ajudar</option>
+            <option value="mesa">Converso calmamente e resolvo a situação</option>
+        </select>
+        <button onclick="checkAnswer(2, 'garrafa')">Enviar</button>
+    </div>
+    <div id="question3" class="question">
+        <p>Qual a única letra do alfabeto que não está presente em qualquer nome de estado dos Estados Unidos?</p>
+        <input type="text" id="answer3" placeholder="Sera que alguma pergunta vai ter a ver com o placeholder?">
+        <button onclick="checkAnswer(3, 'q')">Enviar</button>
+    </div>
+    <div id="question4" class="question">
+        <p>Quais os verdadeiros nomes dos cantores Sorocaba, da dupla Fernando e Sorocaba e Henrique, da dupla Henrique e Juliano? (Resposta a pergunta do seguinte formato: nome1 e nome2)</p>
+        <input type="text" id="answer4" placeholder="Os que tem barba e cabelo preto, eu amo">
+        <button onclick="checkAnswer(4, 'fernando e ricelly')">Enviar</button>
+    </div>
+    <div id="question5" class="question">
+        <p>Qual marca de bebida tem os seguintes sabores: Tech House, Batuca Rock, Disco Ball e Violada Universitária?</p>
+        <input type="text" id="answer5" placeholder="Voces tem nocao que um dos passatempos do brasileiro era mandar um gemido ALTAO pros amigos ouvirem em publico?">
+        <button onclick="checkAnswer(5, 'askov')">Enviar</button>
+    </div>
+    <div id="question6" class="question">
+        <p>Enigma 6: Qual dessas cidades não é cortada pela rodovida Marechal Rondon?</p>
+        <select id="answer6">
+            <option value="">Eu gosto do assunto estradas do Brasil...</option>
+            <option value="toalha">Marilia</option>
+            <option value="esponja">Itu</option>
+            <option value="chuva">Aracatuba</option>
+            <option value="gelo">Tiete</option>
+        </select>
+        <button onclick="checkAnswer(6, 'toalha')">Enviar</button>
+    </div>
+    <div id="question7" class="question">
+        <p>Testando sua memória, qual foi a resposta da terceira pergunta?</p>
+        <input type="text" id="answer7" placeholder="Abrindo meu coracao, eu nao sei se gostei muito ou nao curti essa">
+        <button onclick="checkAnswer(7, 'q')">Enviar</button>
+    </div>
+    <div id="question8" class="question">
+        <p>Quantos animais de cada espécie Moisés colocou em sua arca?</p>
+        <input type="text" id="answer8" placeholder="Hihihihihihi...">
+        <button onclick="checkAnswer(8, '0')">Enviar</button>
+    </div>
+    <div id="question9" class="question">
+        <p>Qual o sobrenome do quadragésimo presidente dos Estados Unidos?</p>
+        <select id="answer9">
+            <option value="">Eu tenho certeza que voce ta pesquisando...</option>
+            <option value="teclado">Reagan</option>
+            <option value="caverna">Bush</option>
+            <option value="oceano">Carter</option>
+            <option value="livro">Clinton</option>
+        </select>
+        <button onclick="checkAnswer(9, 'teclado')">Enviar</button>
+    </div>
+    <div id="question10" class="question">
+        <p>Última pergunta!O jogo Valorant, aka vava (sim, ele ia aparecer aqui também) quando foi anunciado, ainda não era chamado de valorant!Como era o nome dele quando ele foi anunciado pela primeira vez?</p>
+        <input type="text" id="answer10" placeholder="Boa pesquisa">
+        <button onclick="checkAnswer(10, 'project a')">Enviar</button>
+    </div>
+    <div id="final" class="question">
+        <p>F1N4LT1P: 23°13'32.4"S 48°21'03.7"W (A resposta é apenas uma palavra)</p>
+    </div>
+
+    <script>
+        function checkAnswer(questionNumber, correctAnswer) {
+            let userAnswer;
+            if ([2, 6, 9].includes(questionNumber)) {
+                userAnswer = document.getElementById('answer' + questionNumber).value.trim().toLowerCase();
+            } else {
+                userAnswer = document.getElementById('answer' + questionNumber).value.trim().toLowerCase();
+            }
+            if (userAnswer === correctAnswer) {
+                document.getElementById('question' + questionNumber).style.display = 'none';
+                if (questionNumber < 10) {
+                    document.getElementById('question' + (questionNumber + 1)).style.display = 'block';
+                } else {
+                    document.getElementById('final').style.display = 'block';
+                }
+            } else {
+                alert('ERROOU (Ler com voz do Fausto Silva)');
+            }
+        }
+
+        // Generate binary code background effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const binaryBackground = document.getElementById('binary-background');
+            const columns = Math.floor(window.innerWidth / 20);
+
+            for (let i = 0; i < columns; i++) {
+                const binary = document.createElement('div');
+                binary.classList.add('binary');
+                binary.style.left = `${i * 20}px`;
+                binary.style.animationDuration = `${Math.random() * 10 + 5}s`;
+                binary.style.animationDelay = `${Math.random() * 5}s`;
+                for (let j = 0; j < 20; j++) {
+                    const span = document.createElement('span');
+                    span.textContent = Math.random() > 0.5 ? '1' : '0';
+                    span.style.animationDelay = `${Math.random() * 2}s`;
+                    binary.appendChild(span);
+                }
+                binaryBackground.appendChild(binary);
+            }
+        });
+    </script>
+</body>
+</html>
