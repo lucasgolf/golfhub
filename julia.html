@@ -1,193 +1,154 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olá pedagomigas, fiz essa </title>
+    <title>FAQ - 365 dias longe de Bofete</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #ffe4e1;
-            color: #333;
-            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 20px;
-            overflow: hidden;
-        }
-        h1 {
-            font-size: 2.5em;
-            color: #ff69b4;
-            margin-bottom: 20px;
-        }
-        .question {
-            display: none;
-            margin-top: 20px;
-        }
-        input[type="text"], select {
-            padding: 10px;
-            font-size: 1em;
-            margin-top: 10px;
-            width: 80%;
-            background-color: #fff;
+            padding: 0;
+            background-color: #ffefd5; /* Papaya Whip */
             color: #333;
-            border: 1px solid #ccc;
         }
-        button {
-            padding: 10px 20px;
-            font-size: 1em;
-            background-color: #ff69b4;
+
+        header {
+            background-color: #8b4513; /* Marrom Claro */
             color: #fff;
-            border: none;
-            margin-top: 10px;
-            cursor: pointer;
-            border-radius: 5px;
+            text-align: center;
+            padding: 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
-        button:hover {
-            background-color: #ff1493;
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo com Transparência */
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
-        #background-elements {
+
+        h1 {
+            color: #8b4513;
+        }
+
+        .faq-item {
+            margin-bottom: 30px;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .faq-item h2 {
+            font-size: 1.5em;
+            color: #2f4f4f; /* Dark Slate Gray */
+            margin-bottom: 10px;
+        }
+
+        .faq-item p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        footer {
+            background-color: #8b4513;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0; /* Diminuído */
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            text-transform: uppercase;
+            font-size: 0.8em; /* Diminuído */
+            letter-spacing: 1px;
+        }
+
+        /* Estilos adicionais para fundo chamativo */
+        .background-image {
+            background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0');
+            background-size: cover;
+            background-position: center;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: -1;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            opacity: 0.2;
+            filter: brightness(0.7);
         }
-        .element {
-            width: 100px;
-            height: 100px;
-            background-color: #ffb6c1;
-            border-radius: 50%;
-            margin: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em;
-            color: #fff;
-            animation: float 6s ease-in-out infinite;
-        }
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0); }
+        
+        /* Estilo para deixar o texto mais legível sobre o fundo */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
         }
     </style>
 </head>
 <body>
-    <div id="background-elements"></div>
-    <h1>Desafio Educacional</h1>
-    <div id="question1" class="question" style="display: block;">
-        <p>Enigma 1: Eu sou alto quando sou jovem e curto quando sou velho. O que sou?</p>
-        <input type="text" id="answer1" placeholder="Sua resposta...">
-        <button onclick="checkAnswer(1, 'vela')">Enviar</button>
-    </div>
-    <div id="question2" class="question">
-        <p>Enigma 2: O que tem um pescoço, mas não tem cabeça?</p>
-        <select id="answer2">
-            <option value="">Selecione a resposta...</option>
-            <option value="garrafa">Garrafa</option>
-            <option value="cavalo">Cavalo</option>
-            <option value="lampada">Lâmpada</option>
-            <option value="mesa">Mesa</option>
-        </select>
-        <button onclick="checkAnswer(2, 'garrafa')">Enviar</button>
-    </div>
-    <div id="question3" class="question">
-        <p>Enigma 3: O que pode viajar ao redor do mundo enquanto fica em um canto?</p>
-        <input type="text" id="answer3" placeholder="Sua resposta...">
-        <button onclick="checkAnswer(3, 'selo')">Enviar</button>
-    </div>
-    <div id="question4" class="question">
-        <p>Enigma 4: Quanto mais você tira, mais você deixa para trás. O que é?</p>
-        <input type="text" id="answer4" placeholder="Sua resposta...">
-        <button onclick="checkAnswer(4, 'pegadas')">Enviar</button>
-    </div>
-    <div id="question5" class="question">
-        <p>Enigma 5: Eu tenho cidades, mas não casas. Eu tenho montanhas, mas não árvores. Eu tenho água, mas não peixes. O que sou?</p>
-        <input type="text" id="answer5" placeholder="Sua resposta...">
-        <button onclick="checkAnswer(5, 'mapa')">Enviar</button>
-    </div>
-    <div id="question6" class="question">
-        <p>Enigma 6: O que fica mais molhado conforme seca?</p>
-        <select id="answer6">
-            <option value="">Selecione a resposta...</option>
-            <option value="toalha">Toalha</option>
-            <option value="esponja">Esponja</option>
-            <option value="chuva">Chuva</option>
-            <option value="gelo">Gelo</option>
-        </select>
-        <button onclick="checkAnswer(6, 'toalha')">Enviar</button>
-    </div>
-    <div id="question7" class="question">
-        <p>Enigma 7: O que é leve como uma pena, mas nem a pessoa mais forte do mundo consegue segurá-lo por mais de alguns minutos?</p>
-        <input type="text" id="answer7" placeholder="Sua resposta...">
-        <button onclick="checkAnswer(7, 'respiracao')">Enviar</button>
-    </div>
-    <div id="question8" class="question">
-        <p>Enigma 8: O que pode ser quebrado, mas nunca segurado?</p>
-        <input type="text" id="answer8" placeholder="Sua resposta...">
-        <button onclick="checkAnswer(8, 'promessa')">Enviar</button>
-    </div>
-    <div id="question9" class="question">
-        <p>Enigma 9: Tenho chaves, mas não tranco. Tenho espaço, mas não há quartos. Você pode entrar, mas não pode sair. O que sou?</p>
-        <select id="answer9">
-            <option value="">Selecione a resposta...</option>
-            <option value="teclado">Teclado</option>
-            <option value="caverna">Caverna</option>
-            <option value="oceano">Oceano</option>
-            <option value="livro">Livro</option>
-        </select>
-        <button onclick="checkAnswer(9, 'teclado')">Enviar</button>
-    </div>
-    <div id="question10" class="question">
-        <p>Enigma 10: O que pode encher uma sala, mas não ocupa espaço?</p>
-        <input type="text" id="answer10" placeholder="Sua resposta...">
-        <button onclick="checkAnswer(10, 'luz')">Enviar</button>
-    </div>
-    <div id="final" class="question">
-        <p>Parabéns! Você resolveu todos os enigmas.</p>
-        <a href="https://www.example.com">Clique aqui para o link final</a>
-    </div>
+    <div class="background-image"></div>
+    <div class="content-wrapper">
+        <header>
+            <h1>FAQ - Perguntas Frequentes</h1>
+        </header>
 
-    <script>
-        function checkAnswer(questionNumber, correctAnswer) {
-            let userAnswer;
-            if ([2, 6, 9].includes(questionNumber)) {
-                userAnswer = document.getElementById('answer' + questionNumber).value.trim().toLowerCase();
-            } else {
-                userAnswer = document.getElementById('answer' + questionNumber).value.trim().toLowerCase();
-            }
-            if (userAnswer === correctAnswer) {
-                document.getElementById('question' + questionNumber).style.display = 'none';
-                if (questionNumber < 10) {
-                    document.getElementById('question' + (questionNumber + 1)).style.display = 'block';
-                } else {
-                    document.getElementById('final').style.display = 'block';
-                }
-            } else {
-                alert('Resposta incorreta. Tente novamente.');
-            }
-        }
+        <div class="container">
+            <div class="faq-item">
+                <h2>Quais os dias serão esse incrível evento??</h2>
+                <p>O evento será realizado nos dias 16,17 e 18 de agosto, com ida pós 18h no dia 16 e possivelmente, encerrando às 18h do dia 18 de agosto também!!</p>
+            </div>
 
-        // Generate background elements for educational theme
-        document.addEventListener('DOMContentLoaded', () => {
-            const backgroundElements = document.getElementById('background-elements');
-            const symbols = ['A', 'B', 'C', '1', '2', '3', '!', '?', '✓'];
+            <div class="faq-item">
+                <h2>O que é necessário levar de comida e bebida?</h2>
+                <p>Apenas as bebidas que serão de consumo próprio e específico, caso queira levar uma vodka, whisky, gin e misturas, fiquem à vontade que teremos local para elas gelarem!!</p>
+            </div>
 
-            for (let i = 0; i < 20; i++) {
-                const element = document.createElement('div');
-                element.classList.add('element');
-                element.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-                element.style.left = `${Math.random() * 100}%`;
-                element.style.top = `${Math.random() * 100}%`;
-                backgroundElements.appendChild(element);
-            }
-        });
-    </script>
+            <div class="faq-item">
+                <h2>Qual será o valor para cada pessoa?</h2>
+                <p>À medida que as confirmações forem rolando, ficará mais fácil de comprender exatamente quanto ficará para cada um, mas o foco da C.O é que o valor fique bem acessível.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>Vi que terá pessoas de fora, como famílias, devo me preocupar com algo?</h2>
+                <p>Claro que não! Todos eles são super tranquilos, da galera e também vão para a festa com o mesmo motivo que nós: Comemorar a volta da Julia Pires! Mas claro, se alguém sentir alguma dúvida ou incomodo, por favor, fale comigo que tentaremos deixar o mais natural possível para que todos se divirtam!</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>Qual o local exato do evento?</h2>
+                <p>A festa vai ser na chácara ouro branco, em Bofete, para guiar sua localização, só colocar esse endereço no GPS: https://www.google.com/maps/place/23%C2%B013'32.4%22S+48%C2%B021'03.7%22W/@-23.2255381,-48.3538067,15.96z/data=!4m4!3m3!8m2!3d-23.2256663!4d-48.3510326?hl=pt-BR&entry=ttu</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>Vi no cardápio que não tem nada planejado para sexta a noite, como será feito?</h2>
+                <p>Na sexta a noite, teremos petiscos da C.O, mas nada muito substancial, é recomendado que seja levado alguma comida simples, como algo congelado ou miojo, para que o foco maior seja no álcool.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>As pessoas da família estarão todos os dias?</h2>
+                <p>É mais provável que a maoiria deles estejam apenas no sábado e alguns poucos durmam para domingo, mas a sexta feira é apenas nossa!! </p>
+            </div>
+
+            <div class="faq-item">
+                <h2>Para arrumar minha mala, o que é bom eu levar?</h2>
+                <p>É bom levar os seguintes itens: roupas para os 3 dias (leve mais roupas de frio, de noite, a temperatura cai bem), shampoo, condicionador, sabonete, toalha, coberta (lençol e travesseiro, se achar necessário), chinelo, itens de higiene pessoal (escova, pasta, desodorante), óculos de sol, carregador e ver suas necessidades específicas, como remédios e afins.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>Tenho uma dúvida que não foi respondida aqui, como faço?</h2>
+                <p>Só me procurar pelo whatsapp que eu estarei aqui pronto pra responder e bsucando ser muito rápido! (18) 98146-9414!</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>Existe alguma regra a ser seguida?</h2>
+                <p>É importante apenas não se esforçar para diminuir o número de pessoas na Terra.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2024 Golf Eventos. Todos os direitos reservados.</p>
+        </footer>
+    </div>
 </body>
 </html>
