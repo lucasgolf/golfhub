@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema Monty Hall</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Problema Monty Hall</h1>
+        <p>Escolha uma porta e veja se você ganha o prêmio grande!</p>
+        <div class="doors">
+            <div class="door" id="door1" onclick="selectDoor(1)">Porta 1</div>
+            <div class="door" id="door2" onclick="selectDoor(2)">Porta 2</div>
+            <div class="door" id="door3" onclick="selectDoor(3)">Porta 3</div>
+        </div>
+        <div class="actions">
+            <button id="reveal" onclick="revealDoor()">Revelar uma porta</button>
+            <button id="switch" onclick="switchDoor()">Trocar de porta</button>
+            <button id="reset" onclick="resetGame()">Reiniciar Jogo</button>
+        </div>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
